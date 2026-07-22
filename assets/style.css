@@ -15,7 +15,7 @@
   --grey:#6b6f76;
   --line:#e8e1d2;           /* warm hairline */
   --green:#4c7a4c;
-  --stripe:linear-gradient(90deg,var(--gold) 0%,var(--terracotta) 100%);
+  --stripe:var(--gold);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
