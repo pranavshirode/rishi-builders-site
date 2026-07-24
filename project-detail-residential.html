@@ -192,36 +192,14 @@
       <h2>Floor Plans</h2>
       <p>Spacious, intelligently designed layouts maximizing natural light and ventilation.</p>
     </div>
-    <div class="dv2-floorplan-tabs">
-      <div class="floorplan-tabs">
-        <button class="active" onclick="switchFloorplan(this, 'fp1')">2 BHK · 720 sq.ft</button>
-        <button onclick="switchFloorplan(this, 'fp2')">2 BHK · 810 sq.ft</button>
-        <button onclick="switchFloorplan(this, 'fp3')">3 BHK · 1050 sq.ft</button>
-      </div>
-      
-      <div class="dv2-floorplan-img active" id="fp1">
-        <img src="https://images.unsplash.com/photo-1600585154084-3c5c7b4c10f0?q=80&w=1000&auto=format&fit=crop" alt="2 BHK 720 sq.ft floor plan">
-      </div>
-      <div class="dv2-floorplan-img" id="fp2" style="display:none;">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="2 BHK 810 sq.ft floor plan">
-      </div>
-      <div class="dv2-floorplan-img" id="fp3" style="display:none;">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" alt="3 BHK 1050 sq.ft floor plan">
-      </div>
+    <div class="floorplan-tabs dv2-floorplan-tabs">
+      <button class="active" data-img="https://images.unsplash.com/photo-1600585154084-3c5c7b4c10f0?q=80&w=1000&auto=format&fit=crop">2 BHK · 720 sq.ft</button>
+      <button data-img="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop">2 BHK · 810 sq.ft</button>
+      <button data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop">3 BHK · 1050 sq.ft</button>
     </div>
-    <script>
-      function switchFloorplan(btn, id) {
-        document.querySelectorAll('.floorplan-tabs button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelectorAll('.dv2-floorplan-img').forEach(el => {
-          el.classList.remove('active');
-          el.style.display = 'none';
-        });
-        const target = document.getElementById(id);
-        target.style.display = 'block';
-        setTimeout(() => target.classList.add('active'), 10);
-      }
-    </script>
+    <div class="dv2-floorplan-img">
+      <img src="https://images.unsplash.com/photo-1600585154084-3c5c7b4c10f0?q=80&w=1000&auto=format&fit=crop" alt="2 BHK 720 sq.ft floor plan">
+    </div>
   </div>
 </section>
 

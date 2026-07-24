@@ -49,12 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Floor plan tabs
   document.querySelectorAll('.floorplan-tabs').forEach(tabs => {
-    const img = tabs.nextElementSibling;
+    let imgContainer = tabs.nextElementSibling;
+    let img = null;
+    if (imgContainer) {
+      if (imgContainer.tagName === 'IMG') {
+        img = imgContainer;
+      } else {
+        img = imgContainer.querySelector('img');
+      }
+    }
+    
     tabs.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('click', () => {
         tabs.querySelectorAll('button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        if (img && img.tagName === 'IMG' && btn.dataset.img) img.src = btn.dataset.img;
+        if (img && btn.dataset.img) img.src = btn.dataset.img;
       });
     });
   });
