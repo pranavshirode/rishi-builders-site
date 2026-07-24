@@ -456,6 +456,14 @@ footer::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;back
 /* ---------- Related V2 ---------- */
 .dv2-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
 
+/* ---------- Floor Plan Tabs V2 ---------- */
+.dv2-floorplan-tabs{display:flex;gap:10px;margin-bottom:24px;justify-content:center;flex-wrap:wrap;}
+.dv2-floorplan-tabs button{padding:10px 22px;border:1.5px solid var(--line);background:#fff;border-radius:30px;font-size:12.5px;font-weight:600;color:var(--navy);cursor:pointer;letter-spacing:.3px;transition:.25s;font-family:'Work Sans',sans-serif;}
+.dv2-floorplan-tabs button.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.dv2-floorplan-tabs button:hover:not(.active){border-color:var(--gold);color:var(--navy-deep);}
+.dv2-floorplan-img{max-width:900px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 16px 40px rgba(15,44,76,.12);}
+.dv2-floorplan-img img{width:100%;height:auto;min-height:260px;object-fit:cover;display:block;transition:opacity .3s;}
+
 /* ---------- Detail V2 Responsive ---------- */
 @media(max-width:1000px){
   .dv2-hero{height:80vh;min-height:480px;}
