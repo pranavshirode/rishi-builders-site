@@ -149,7 +149,7 @@ nav li { position:relative; width: 100%; }
 .page-hero { position:relative; height:240px; display:flex; align-items:center; overflow:hidden; }
 .page-hero .bg { position:absolute; inset:0; background:linear-gradient(100deg,rgba(15,44,76,.92),rgba(15,44,76,.6)); }
 .page-hero .bg img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-1; }
-.page-hero-content { position:relative; z-index:2; color:#fff; }
+.page-hero-content { position:relative; z-index:2; color:#fff; text-align:center; width:100%; }
 .page-hero-content h1 { font-size:32px; color:#fff; }
 
 /* SECTION LAYOUTS */
