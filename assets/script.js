@@ -19,12 +19,30 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(() => show((cur + 1) % slides.length), 6000);
   }
 
-  // Generic filter buttons (Projects listing / Gallery) - purely visual toggle for the proof
+  // Generic filter buttons (Projects listing / Gallery) - Functional filtering
   document.querySelectorAll('.filter-bar').forEach(bar => {
     bar.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('click', () => {
         bar.querySelectorAll('button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        
+        const filterVal = btn.textContent.trim().toLowerCase();
+        const section = bar.closest('section');
+        
+        if (section) {
+          const items = section.querySelectorAll('.gallery-tile, .proj-card');
+          items.forEach(item => {
+            // Check the specific tags for matching
+            const tagEl = item.querySelector('.tag, .proj-status');
+            const itemText = tagEl ? tagEl.textContent.toLowerCase() : item.textContent.toLowerCase();
+            
+            if (filterVal === 'all' || itemText.includes(filterVal)) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
       });
     });
   });
