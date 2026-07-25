@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // 6. Filter Buttons (Cross-fade Animation)
-  document.querySelectorAll('.filter-category-strip').forEach(bar => {
+  document.querySelectorAll('.filter-category-strip, .filter-bar').forEach(bar => {
     bar.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('click', () => {
         if(btn.classList.contains('active')) return;
@@ -196,28 +196,31 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.classList.add('active');
         
         const filterVal = btn.getAttribute('data-filter') || btn.textContent.trim().toLowerCase();
-        const section = bar.closest('section');
         
-        if (section) {
-          const grid = section.querySelector('.feat-grid, .proj-row');
-          if(grid) {
-            grid.classList.add('filtering');
-            setTimeout(() => {
-              const items = grid.querySelectorAll('.feat-card, .proj-card');
-              items.forEach(item => {
-                const tagEl = item.querySelector('.proj-type, .proj-status');
-                const itemText = tagEl ? tagEl.textContent.toLowerCase() : item.textContent.toLowerCase();
-                
-                if (filterVal === 'all' || itemText.includes(filterVal)) {
-                  item.style.display = '';
-                } else {
-                  item.style.display = 'none';
-                }
-              });
-              grid.classList.remove('filtering');
-            }, 400); 
-          }
+        // Try finding nearest section, otherwise fallback to document
+        let searchContext = bar.closest('section');
+        if (!searchContext) {
+          searchContext = document;
         }
+        
+        const grids = searchContext.querySelectorAll('.feat-grid, .proj-row, .gallery-grid');
+        grids.forEach(grid => {
+          grid.classList.add('filtering');
+          setTimeout(() => {
+            const items = grid.querySelectorAll('.feat-card, .proj-card, .gallery-item');
+            items.forEach(item => {
+              const tagEl = item.querySelector('.proj-type, .proj-status, .tag');
+              const itemText = tagEl ? tagEl.textContent.toLowerCase() : item.textContent.toLowerCase();
+              
+              if (filterVal === 'all' || filterVal === 'all status' || itemText.includes(filterVal)) {
+                item.style.display = '';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+            grid.classList.remove('filtering');
+          }, 400); 
+        });
       });
     });
   });
@@ -410,5 +413,20 @@ document.addEventListener('DOMContentLoaded', function () {
       }, {passive: true});
     }
   }
+
+  // 11. Prevent Form Submissions (Mock Success Alert)
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your request has been successfully submitted. We will get back to you shortly.');
+      
+      // Close bottom sheet if open
+      if (bottomSheet && bottomSheet.classList.contains('is-open')) {
+        bottomSheet.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+      form.reset();
+    });
+  });
 
 });
