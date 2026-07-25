@@ -549,4 +549,8 @@ footer::before { content:''; position:absolute; left:0; right:0; top:0; height:4
   .contact-form-card { padding: 40px; }
   .about-grid { grid-template-columns: 1fr 1fr; align-items: center; }
   .stats-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  
+  .filter-bar-wrapper .container { display: flex; align-items: center; justify-content: center; gap: 24px; }
+  .filter-category-strip { margin-bottom: 0; padding-bottom: 0; justify-content: center; flex-wrap: wrap; }
+  .filter-bar-wrapper select { width: 300px; margin-bottom: 0 !important; }
 }
