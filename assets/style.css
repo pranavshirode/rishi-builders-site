@@ -68,7 +68,7 @@ header {
 }
 .logo img { height:40px; width:auto; display:block; }
 .menu-toggle { 
-  background:none; border:none; color:var(--navy-deep); font-size:28px; 
+  background:none; border:none; color:#fff; font-size:28px; 
   cursor:pointer; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: flex-end;
 }
 .nav-cta { display: none; }

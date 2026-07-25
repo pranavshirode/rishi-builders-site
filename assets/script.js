@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.addEventListener('click', openNav);
     if(navClose) navClose.addEventListener('click', closeNav);
     navOverlay.addEventListener('click', closeNav);
+    
+    // Close nav when clicking any anchor link inside it
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
   }
 
   // Nav Dropdown Accordion
