@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Projects | Rishi Builders & Developers</title>
 <meta name="description" content="Explore Rishi Builders & Developers' residential, commercial, NA plot and agricultural land projects across Nashik — ongoing, upcoming and completed.">
 <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
@@ -12,21 +12,31 @@
 <header>
   <div class="nav-wrap">
     <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers"></a>
-    <nav><ul>
+    <nav>
+      <button class="nav-close" aria-label="Close menu">✕</button>
+      <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="projects.html" class="active">Projects ▾</a><div class="drop"><div class="drop-label">Land Projects</div><a href="#na-plots">NA Plots</a><a href="#agricultural">Agricultural Land</a><div class="drop-label">Construction Projects</div><a href="#residential">Residential Projects</a><a href="#commercial">Commercial Projects</a></div></li>
+      <li>
+        <button class="nav-dropdown-btn">Projects ▾</button>
+        <a href="projects.html" class="active desktop-only" style="display:none;">Projects ▾</a>
+        <div class="drop">
+          <div class="drop-label">Land Projects</div><a href="#na-plots">NA Plots</a><a href="#agricultural">Agricultural Land</a>
+          <div class="drop-label">Construction Projects</div><a href="#residential">Residential Projects</a><a href="#commercial">Commercial Projects</a>
+        </div>
+      </li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="careers.html">Careers</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-    </ul></nav>
+    </ul>
+    </nav>
     <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Enquire Now</a></div>
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </header>
 
 <section class="page-hero">
-  <div class="bg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" style="background-attachment:fixed;"></div>
+  <div class="bg"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" style="background-attachment:fixed;" fetchpriority="high"></div>
   <div class="container page-hero-content">
     <h1>Our Projects</h1>
     <div class="breadcrumb"><a href="index.html">Home</a> / Projects</div>
@@ -38,14 +48,14 @@
   <div class="container">
     <div class="cat-grid reveal-on-scroll">
       <a href="#residential" class="cat-card">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800" alt="Construction Projects">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800" alt="Construction Projects" loading="lazy">
         <div class="overlay">
-          <h3>Construction Projects</h3>
+          <h3>Construction</h3>
           <p>Premium Residential &amp; Commercial developments shaping Nashik's skyline.</p>
         </div>
       </a>
       <a href="#na-plots" class="cat-card">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800" alt="Land Projects">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800" alt="Land Projects" loading="lazy">
         <div class="overlay">
           <h3>Land Projects</h3>
           <p>Fully developed NA plots and agricultural expanses with clear titles.</p>
@@ -58,27 +68,25 @@
 <!-- FILTERS -->
 <div class="filter-bar-wrapper">
   <div class="container">
-    <div class="filter-row">
-      <div class="filter-category-strip" style="margin-bottom:0;">
-        <button class="active" data-filter="all">All Status</button>
-        <button data-filter="ongoing">Ongoing</button>
-        <button data-filter="upcoming">Upcoming</button>
-        <button data-filter="completed">Completed</button>
-      </div>
-      <select class="filter-select">
-        <option>All Locations</option>
-        <option>Panchavati</option>
-        <option>Gangapur Road</option>
-        <option>College Road</option>
-        <option>Mumbai Naka</option>
-        <option>Trimbak Road</option>
-        <option>Indira Nagar</option>
-      </select>
+    <div class="filter-category-strip">
+      <button class="active" data-filter="all">All Status</button>
+      <button data-filter="ongoing">Ongoing</button>
+      <button data-filter="upcoming">Upcoming</button>
+      <button data-filter="completed">Completed</button>
     </div>
+    <select class="filter-select" style="margin-bottom:0;">
+      <option>All Locations</option>
+      <option>Panchavati</option>
+      <option>Gangapur Road</option>
+      <option>College Road</option>
+      <option>Mumbai Naka</option>
+      <option>Trimbak Road</option>
+      <option>Indira Nagar</option>
+    </select>
   </div>
 </div>
 
-<section style="padding-top:20px; background:var(--cream);">
+<section style="padding-top:40px; background:var(--cream);">
   <div class="container">
 
     <!-- RESIDENTIAL -->
@@ -87,70 +95,60 @@
       
       <!-- Card 1 -->
       <a href="project-detail-residential.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Rishi Sunrise Residency"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Rishi Sunrise Residency" loading="lazy"></div>
         <span class="proj-status">Ongoing</span>
         <div class="card-content">
           <div class="card-title">Rishi Sunrise Residency</div>
           <div class="card-location">Panchavati, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Premium 2 & 3 BHK at Panchavati's most strategic address. Starting at ₹ 52 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Premium 2 & 3 BHK at Panchavati's most strategic address. Starting at ₹ 52 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
       
       <!-- Card 2 -->
       <a href="project-detail-residential.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop" alt="Rishi Heights"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop" alt="Rishi Heights" loading="lazy"></div>
         <span class="proj-status">Ongoing</span>
         <div class="card-content">
           <div class="card-title">Rishi Heights</div>
           <div class="card-location">Gangapur Road, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Luxurious 3 & 4 BHK residences on Gangapur Road. Starting at ₹ 45 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Luxurious 3 & 4 BHK residences on Gangapur Road. Starting at ₹ 45 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
 
       <!-- Card 3 -->
       <a href="project-detail-residential.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop" alt="Rishi Palm Residency"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop" alt="Rishi Palm Residency" loading="lazy"></div>
         <span class="proj-status">Upcoming</span>
         <div class="card-content">
           <div class="card-title">Rishi Palm Residency</div>
           <div class="card-location">Dwarka, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Modern apartments in the heart of Dwarka. Starting at ₹ 40 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Modern apartments in the heart of Dwarka. Starting at ₹ 40 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
       
       <!-- Card 4 -->
       <a href="project-detail-residential.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=800&auto=format&fit=crop" alt="Rishi Enclave"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=800&auto=format&fit=crop" alt="Rishi Enclave" loading="lazy"></div>
         <span class="proj-status">Completed</span>
         <div class="card-content">
           <div class="card-title">Rishi Enclave</div>
           <div class="card-location">Indira Nagar, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Comfort & elegance delivered in 2023.</p>
-          </div>
+          <div class="card-reveal-info"><p>Comfort & elegance delivered in 2023.</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
 
       <!-- Card 5 -->
       <a href="project-detail-residential.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop" alt="Rishi Residency Phase 1"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop" alt="Rishi Residency Phase 1" loading="lazy"></div>
         <span class="proj-status">Completed</span>
         <div class="card-content">
           <div class="card-title">Rishi Residency Phase 1</div>
           <div class="card-location">Panchavati, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Our flagship project delivered in 2019.</p>
-          </div>
+          <div class="card-reveal-info"><p>Our flagship project delivered in 2019.</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
@@ -162,42 +160,36 @@
       
       <!-- Card 1 -->
       <a href="project-detail-commercial.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop" alt="Rishi Business Square"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop" alt="Rishi Business Square" loading="lazy"></div>
         <span class="proj-status">Upcoming</span>
         <div class="card-content">
           <div class="card-title">Rishi Business Square</div>
           <div class="card-location">College Road, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Vibrant commercial spaces on College Road. Starting at ₹ 32 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Vibrant commercial spaces on College Road. Starting at ₹ 32 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
 
       <!-- Card 2 -->
       <a href="project-detail-commercial.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Rishi Trade Center Phase 2"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Rishi Trade Center Phase 2" loading="lazy"></div>
         <span class="proj-status">Ongoing</span>
         <div class="card-content">
           <div class="card-title">Rishi Trade Center — Phase 2</div>
           <div class="card-location">Mumbai Naka, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Landmark commercial address at Mumbai Naka. Starting at ₹ 60 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Landmark commercial address at Mumbai Naka. Starting at ₹ 60 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
 
       <!-- Card 3 -->
       <a href="project-detail-commercial.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Rishi Trade Center"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Rishi Trade Center" loading="lazy"></div>
         <span class="proj-status">Completed</span>
         <div class="card-content">
           <div class="card-title">Rishi Trade Center</div>
           <div class="card-location">Mumbai Naka, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Phase 1 delivered successfully in 2021.</p>
-          </div>
+          <div class="card-reveal-info"><p>Phase 1 delivered successfully in 2021.</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
@@ -209,28 +201,24 @@
       
       <!-- Card 1 -->
       <a href="project-detail-land.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Rishi Green Acres"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Rishi Green Acres" loading="lazy"></div>
         <span class="proj-status">Upcoming</span>
         <div class="card-content">
           <div class="card-title">Rishi Green Acres</div>
           <div class="card-location">Trimbak Road, Nashik</div>
-          <div class="card-reveal-info">
-            <p>NA plots on Trimbak Road — a smart investment. Starting at ₹ 12 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>NA plots on Trimbak Road — a smart investment. Starting at ₹ 12 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
 
       <!-- Card 2 -->
       <a href="project-detail-land.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=800&auto=format&fit=crop" alt="Rishi Valley Plots"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=800&auto=format&fit=crop" alt="Rishi Valley Plots" loading="lazy"></div>
         <span class="proj-status">Ongoing</span>
         <div class="card-content">
           <div class="card-title">Rishi Valley Plots</div>
           <div class="card-location">Igatpuri Road, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Scenic plots surrounded by nature. Starting at ₹ 9 Lac*</p>
-          </div>
+          <div class="card-reveal-info"><p>Scenic plots surrounded by nature. Starting at ₹ 9 Lac*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
@@ -242,14 +230,12 @@
       
       <!-- Card 1 -->
       <a href="project-detail-land.html" class="proj-card">
-        <div class="proj-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Rishi Farmland Estates"></div>
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Rishi Farmland Estates" loading="lazy"></div>
         <span class="proj-status">Available</span>
         <div class="card-content">
           <div class="card-title">Rishi Farmland Estates</div>
           <div class="card-location">Niphad, Nashik</div>
-          <div class="card-reveal-info">
-            <p>Fertile agricultural land starting at ₹ 6 Lac / Acre*</p>
-          </div>
+          <div class="card-reveal-info"><p>Fertile agricultural land starting at ₹ 6 Lac / Acre*</p></div>
           <div class="card-link-btn">View Details →</div>
         </div>
       </a>
@@ -258,32 +244,49 @@
   </div>
 </section>
 
-<section class="cta reveal-on-scroll">
-  <div class="container" style="text-align:center;position:relative;z-index:2;">
-    <span class="eyebrow">Not Sure Which Project Fits You?</span>
-    <h2 style="color:#fff;font-size:30px;margin-bottom:20px;">Talk To Our Sales Team</h2>
-    <a class="btn btn-gold" href="contact.html">Contact Us</a>
-  </div>
-</section>
-
 <footer>
   <div class="container foot-grid reveal-on-scroll">
     <div>
-      <div class="foot-logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers"></div>
-      <p>Come Home To Quality — crafting residential, commercial and land developments across Nashik.</p>
+      <div class="foot-logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers" loading="lazy"></div>
+      <p style="margin-bottom: 20px;">Come Home To Quality — crafting residential, commercial and land developments across Nashik.</p>
       <div class="foot-social">
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.08 0-1.8.57-2.14 1.14v-1H9v9h3.04v-4.93c0-1.28.33-2.53 1.93-2.53 1.58 0 1.6 1.48 1.6 2.6V18.5h3.04M5.95 6.72a1.8 1.8 0 0 0 0 3.6 1.8 1.8 0 0 0 0-3.6M7.5 18.5V9.5H4.4v9h3.1z"/></svg></a>
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6m4.4 4.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m0 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m5.3-2.4a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg></a>
       </div>
     </div>
     <div class="foot-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div class="foot-col"><h5>Useful Links</h5><ul><li><a href="careers.html">Careers</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms &amp; Conditions</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
   </div>
-  <div class="container foot-badges"><img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo"><img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo"></div>
+  <div class="container foot-badges">
+    <img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo" loading="lazy">
+    <img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo" loading="lazy">
+  </div>
   <div class="foot-bottom-band"><div class="container foot-bottom"><span>© 2026 Rishi Builders &amp; Developers — All Rights Reserved.</span></div></div>
 </footer>
+
+<!-- Floating CTA & Bottom Sheet (Mobile only via CSS) -->
+<div class="bottom-cta-bar">
+  <button class="btn btn-gold">Enquire Now</button>
+</div>
+
+<div class="bottom-sheet">
+  <div class="bs-overlay"></div>
+  <div class="bs-content">
+    <button class="bs-close">✕</button>
+    <div class="bs-header">
+      <h3>Get In Touch</h3>
+      <p>Your ideal space is just a step away.</p>
+    </div>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Mobile Number" required>
+      <select><option>Select Project</option><option>Rishi Sunrise Residency</option><option>Rishi Heights</option></select>
+      <button class="btn btn-navy" type="submit">Submit Request</button>
+    </form>
+    <div class="fine">Your information is secure.</div>
+  </div>
+</div>
+
 <script src="assets/script.js"></script>
 </body>
 </html>
