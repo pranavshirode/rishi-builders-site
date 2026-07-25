@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>About Us | Rishi Builders & Developers</title>
 <meta name="description" content="About Rishi Builders & Developers — a Nashik-based developer building residential, commercial and land projects on quality, transparency and timely delivery.">
 <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
@@ -12,15 +12,25 @@
 <header>
   <div class="nav-wrap">
     <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers"></a>
-    <nav><ul>
+    <nav>
+      <button class="nav-close" aria-label="Close menu">✕</button>
+      <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About Us</a></li>
-      <li><a href="projects.html">Projects ▾</a><div class="drop"><div class="drop-label">Land Projects</div><a href="projects.html#na-plots">NA Plots</a><a href="projects.html#agricultural">Agricultural Land</a><div class="drop-label">Construction Projects</div><a href="projects.html#residential">Residential Projects</a><a href="projects.html#commercial">Commercial Projects</a></div></li>
+      <li>
+        <button class="nav-dropdown-btn">Projects ▾</button>
+        <a href="projects.html" class="desktop-only" style="display:none;">Projects ▾</a>
+        <div class="drop">
+          <div class="drop-label">Land Projects</div><a href="projects.html#na-plots">NA Plots</a><a href="projects.html#agricultural">Agricultural Land</a>
+          <div class="drop-label">Construction Projects</div><a href="projects.html#residential">Residential Projects</a><a href="projects.html#commercial">Commercial Projects</a>
+        </div>
+      </li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="careers.html">Careers</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-    </ul></nav>
-    <div class="nav-cta"><a href="contact.html" class="btn btn-gold" style="padding:11px 22px;">Enquire Now</a></div>
+    </ul>
+    </nav>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Enquire Now</a></div>
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </header>
@@ -34,21 +44,25 @@
 </section>
 
 <section style="background:var(--white);">
-  <div class="container about-grid">
-    <div>
+  <div class="container story-block">
+    <div class="story-content">
       <span class="eyebrow">Company Introduction</span>
       <h2 style="font-size:32px;margin-bottom:18px;">Two Decades Of Building Trust, Not Just Structures</h2>
       <p style="color:var(--grey);font-size:15px;margin-bottom:16px;">Rishi Builders & Developers was founded with a simple belief — that a home is more than four walls, it's a promise kept. Since our first project, we've grown into one of Nashik's trusted names in residential, commercial and land development.</p>
       <p style="color:var(--grey);font-size:15px;margin-bottom:16px;">Our team of architects, engineers and project managers work together on every site to make sure what's promised in the brochure is exactly what's delivered at possession — on quality, on specification, and on time.</p>
       <p style="color:var(--grey);font-size:15px;margin-bottom:26px;">Today, with 25+ projects delivered and thousands of families housed, our tagline remains our operating principle: Come Home To Quality.</p>
       <div class="highlight-grid" style="margin-bottom:10px;">
-        <li><span class="chk">✓</span> Founded on transparency &amp; trust</li>
-        <li><span class="chk">✓</span> RERA-registered across all projects</li>
-        <li><span class="chk">✓</span> In-house design &amp; construction team</li>
-        <li><span class="chk">✓</span> Consistent on-time possession record</li>
+        <ul>
+          <li><span class="chk">✓</span> Founded on transparency &amp; trust</li>
+          <li><span class="chk">✓</span> RERA-registered across all projects</li>
+          <li><span class="chk">✓</span> In-house design &amp; construction team</li>
+          <li><span class="chk">✓</span> Consistent on-time possession record</li>
+        </ul>
       </div>
     </div>
-    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" style="border-radius:6px;height:420px;object-fit:cover;">
+    <div class="story-images">
+      <img class="story-img-main" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -87,9 +101,17 @@
     <div class="foot-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div class="foot-col"><h5>Useful Links</h5><ul><li><a href="careers.html">Careers</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms &amp; Conditions</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
   </div>
-  <div class="container foot-badges"><img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo"><img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo"></div>
+  <div class="container foot-badges">
+    <img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo" loading="lazy">
+    <img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo" loading="lazy">
+  </div>
   <div class="foot-bottom-band"><div class="container foot-bottom"><span>© 2026 Rishi Builders &amp; Developers — All Rights Reserved.</span></div></div>
 </footer>
+
+<div class="bottom-cta-bar">
+  <a href="contact.html" class="btn btn-gold">Enquire Now</a>
+</div>
+
 <script src="assets/script.js"></script>
 </body>
 </html>

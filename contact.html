@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Contact Us | Rishi Builders & Developers</title>
 <meta name="description" content="Contact Rishi Builders & Developers — visit our office, call, WhatsApp or send an enquiry about our Nashik projects.">
 <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
@@ -12,15 +12,25 @@
 <header>
   <div class="nav-wrap">
     <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers"></a>
-    <nav><ul>
+    <nav>
+      <button class="nav-close" aria-label="Close menu">✕</button>
+      <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="projects.html">Projects ▾</a><div class="drop"><div class="drop-label">Land Projects</div><a href="projects.html#na-plots">NA Plots</a><a href="projects.html#agricultural">Agricultural Land</a><div class="drop-label">Construction Projects</div><a href="projects.html#residential">Residential Projects</a><a href="projects.html#commercial">Commercial Projects</a></div></li>
+      <li>
+        <button class="nav-dropdown-btn">Projects ▾</button>
+        <a href="projects.html" class="desktop-only" style="display:none;">Projects ▾</a>
+        <div class="drop">
+          <div class="drop-label">Land Projects</div><a href="projects.html#na-plots">NA Plots</a><a href="projects.html#agricultural">Agricultural Land</a>
+          <div class="drop-label">Construction Projects</div><a href="projects.html#residential">Residential Projects</a><a href="projects.html#commercial">Commercial Projects</a>
+        </div>
+      </li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="careers.html">Careers</a></li>
       <li><a href="contact.html" class="active">Contact Us</a></li>
-    </ul></nav>
-    <div class="nav-cta"><a href="contact.html" class="btn btn-gold" style="padding:11px 22px;">Enquire Now</a></div>
+    </ul>
+    </nav>
+    <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Enquire Now</a></div>
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
   </div>
 </header>
@@ -92,10 +102,13 @@
     </div>
     <div class="foot-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div class="foot-col"><h5>Useful Links</h5><ul><li><a href="careers.html">Careers</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms &amp; Conditions</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+  <div class="container foot-badges">
+    <img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo" loading="lazy">
+    <img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo" loading="lazy">
   </div>
-  <div class="container foot-badges"><img src="assets/images/badges/credai.png" alt="CREDAI Member" class="badge-logo"><img src="assets/images/badges/maharera.png" alt="MahaRERA Registered" class="badge-logo"></div>
   <div class="foot-bottom-band"><div class="container foot-bottom"><span>© 2026 Rishi Builders &amp; Developers — All Rights Reserved.</span></div></div>
 </footer>
+
 <script src="assets/script.js"></script>
 </body>
 </html>
