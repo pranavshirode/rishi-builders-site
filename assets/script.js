@@ -1,56 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  // 1. Mobile Nav Drawer & Overlay
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navClose = document.querySelector('.nav-close');
-  const nav = document.querySelector('nav');
-  let navOverlay = document.querySelector('.nav-overlay');
-  
-  if (menuToggle && nav) {
-    if (!navOverlay) {
-      navOverlay = document.createElement('div');
-      navOverlay.className = 'nav-overlay';
-      document.body.appendChild(navOverlay);
-    }
-
-    function openNav() {
-      nav.classList.add('is-open');
-      navOverlay.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeNav() {
-      nav.classList.remove('is-open');
-      navOverlay.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    menuToggle.addEventListener('click', openNav);
-    if(navClose) navClose.addEventListener('click', closeNav);
-    navOverlay.addEventListener('click', closeNav);
-    
-    // Close nav when clicking hash links (same-page navigation)
-    nav.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', closeNav);
-    });
-  }
-
-  // Nav Dropdown Accordion
-  const navDropdownBtns = document.querySelectorAll('.nav-dropdown-btn');
-  navDropdownBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const drop = btn.parentElement.querySelector('.drop');
-      const isOpen = drop.classList.contains('is-open');
-      document.querySelectorAll('.drop').forEach(d => d.classList.remove('is-open'));
-      document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.textContent = b.textContent.replace('▴', '▾'));
-      
-      if (!isOpen) {
-        drop.classList.add('is-open');
-        btn.innerHTML = btn.innerHTML.replace('▾', '▴');
-      }
-    });
-  });
 
   // 2. IntersectionObserver for Scroll Reveals
   const revealElements = document.querySelectorAll('.reveal-on-scroll');

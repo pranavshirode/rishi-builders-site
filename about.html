@@ -12,13 +12,16 @@
 <header>
   <div class="nav-wrap">
     <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Rishi Builders & Developers"></a>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle" hidden>
+    <label for="mobile-menu-toggle" class="nav-overlay" aria-label="Close menu"></label>
     <nav>
-      <button class="nav-close" aria-label="Close menu">✕</button>
+      <label for="mobile-menu-toggle" class="nav-close" aria-label="Close menu">✕</label>
       <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About Us</a></li>
       <li>
-        <button class="nav-dropdown-btn">Projects ▾</button>
+        <input type="checkbox" id="proj-drop-toggle" class="proj-drop-toggle" hidden>
+          <label for="proj-drop-toggle" class="nav-dropdown-btn">Projects ▾</label>
         <a href="projects.html" class="desktop-only">Projects ▾</a>
         <div class="drop">
           <a href="projects.html">All Projects</a>
@@ -32,7 +35,7 @@
     </ul>
     </nav>
     <div class="nav-cta"><a href="contact.html" class="btn btn-gold">Enquire Now</a></div>
-    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <label for="mobile-menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</label>
   </div>
 </header>
 
