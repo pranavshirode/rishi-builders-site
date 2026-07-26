@@ -327,34 +327,24 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       const footer = document.querySelector('footer');
-      let footerVisiblePx = 0;
+      let isFooterVisible = false;
       if (footer) {
         const footerRect = footer.getBoundingClientRect();
         if (footerRect.top < window.innerHeight) {
-          footerVisiblePx = window.innerHeight - footerRect.top;
+          isFooterVisible = true;
         }
       }
 
-      if (scrollY > 600) {
+      if (scrollY > 600 && !isFooterVisible) {
         if (miniCta) {
           miniCta.classList.add('visible');
-          if (footerVisiblePx > 0) {
-            miniCta.style.transition = 'none';
-            miniCta.style.transform = `translateY(-${footerVisiblePx}px)`;
-          } else {
-            miniCta.style.transition = '';
-            miniCta.style.transform = '';
-          }
+          miniCta.style.transition = '';
+          miniCta.style.transform = '';
         }
         if (bottomCta) {
           bottomCta.classList.add('visible');
-          if (footerVisiblePx > 0) {
-            bottomCta.style.transition = 'none';
-            bottomCta.style.transform = `translateY(-${footerVisiblePx}px)`;
-          } else {
-            bottomCta.style.transition = '';
-            bottomCta.style.transform = '';
-          }
+          bottomCta.style.transition = '';
+          bottomCta.style.transform = '';
         }
       } else {
         if (miniCta) {
