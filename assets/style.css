@@ -376,7 +376,7 @@ section, .ms-section { padding:60px 0; }
 .video-modal-content { width: 100%; aspect-ratio: 16/9; background: #000; }
 
 /* FOOTER (Mobile) */
-footer { background:var(--navy-deep); color:#c9cdd6; padding-top:40px; position:relative; padding-bottom: calc(80px + env(safe-area-inset-bottom)); /* Space for bottom CTA bar */ }
+footer { background: #000000; color:#c9cdd6; padding-top:40px; position:relative; padding-bottom: calc(80px + env(safe-area-inset-bottom)); /* Space for bottom CTA bar */ }
 footer::before { content:''; position:absolute; left:0; right:0; top:0; height:4px; background:var(--stripe); }
 .foot-grid { display:grid; grid-template-columns:1fr; gap:40px; padding-bottom:30px; }
 .foot-logo img { height: 60px; width: auto; display: block; margin-bottom: 16px; }
