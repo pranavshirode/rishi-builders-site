@@ -338,19 +338,33 @@ document.addEventListener('DOMContentLoaded', function () {
       if (scrollY > 600) {
         if (miniCta) {
           miniCta.classList.add('visible');
-          miniCta.style.transform = footerVisiblePx > 0 ? `translateY(-${footerVisiblePx}px)` : '';
+          if (footerVisiblePx > 0) {
+            miniCta.style.transition = 'none';
+            miniCta.style.transform = `translateY(-${footerVisiblePx}px)`;
+          } else {
+            miniCta.style.transition = '';
+            miniCta.style.transform = '';
+          }
         }
         if (bottomCta) {
           bottomCta.classList.add('visible');
-          bottomCta.style.transform = footerVisiblePx > 0 ? `translateY(-${footerVisiblePx}px)` : '';
+          if (footerVisiblePx > 0) {
+            bottomCta.style.transition = 'none';
+            bottomCta.style.transform = `translateY(-${footerVisiblePx}px)`;
+          } else {
+            bottomCta.style.transition = '';
+            bottomCta.style.transform = '';
+          }
         }
       } else {
         if (miniCta) {
           miniCta.classList.remove('visible');
+          miniCta.style.transition = '';
           miniCta.style.transform = '';
         }
         if (bottomCta) {
           bottomCta.classList.remove('visible');
+          bottomCta.style.transition = '';
           bottomCta.style.transform = '';
         }
       }
