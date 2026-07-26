@@ -123,12 +123,12 @@ nav li { position:relative; width: 100%; }
   position:relative; z-index:2; height:100%; display:flex; flex-direction:column; 
   justify-content:center; padding:0 20px; color:#fff;
 }
-.ms-hero-content { justify-content: flex-end; padding-bottom: 80px; }
-.slide-content h1, .ms-hero-content h1 { font-size:36px; line-height:1.15; margin-bottom:12px; color:#fff; }
-.slide-content p, .ms-hero-sub { font-size:15px; margin-bottom:24px; color:#f0f0f0; }
+.ms-hero-content { justify-content: flex-end; padding-bottom: 60px; }
+.slide-content h1, .ms-hero-content h1 { font-size:30px; line-height:1.15; margin-bottom:8px; color:#fff; }
+.slide-content p, .ms-hero-sub { font-size:14px; margin-bottom:16px; color:#f0f0f0; }
 
 .hero-dots, .ms-hero-dots { position:absolute; bottom:20px; left:20px; display:flex; gap:8px; z-index:5; }
-.ms-hero-dots { left: 50%; transform: translateX(-50%); bottom: 30px; }
+.ms-hero-dots { left: 50%; transform: translateX(-50%); bottom: 20px; }
 .hero-dots span, .ms-hero-dots span { 
   width:24px; height:4px; border-radius:2px; background:rgba(255,255,255,.3); 
   cursor:pointer; min-height: 24px; display: flex; align-items: center; /* Larger touch target */
@@ -139,10 +139,10 @@ nav li { position:relative; width: 100%; }
 .hero-dots span.active::before, .ms-hero-dots span.active::before { background:var(--gold); }
 
 .hero-nav { display: none; } /* Hidden on mobile */
-.stat-pills { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
-.stat-pill { background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border-radius: 8px; padding: 10px 16px; display: flex; justify-content: space-between; border: 1px solid rgba(255,255,255,0.2); }
-.stat-pill b { font-size: 16px; color: #fff; }
-.stat-pill span { font-size: 12px; color: #e0e0e0; text-transform: uppercase; letter-spacing: 1px; }
+.stat-pills { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.stat-pill { background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border-radius: 8px; padding: 8px 12px; display: flex; justify-content: space-between; border: 1px solid rgba(255,255,255,0.2); }
+.stat-pill b { font-size: 14px; color: #fff; }
+.stat-pill span { font-size: 11px; color: #e0e0e0; text-transform: uppercase; letter-spacing: 1px; }
 .breadcrumb { font-size: 12px; margin-bottom: 12px; }
 
 /* PAGE HERO (Inner Pages) */
@@ -442,7 +442,16 @@ footer::before { content:''; position:absolute; left:0; right:0; top:0; height:4
   /* Hero */
   .hero { height: 88vh; min-height: 600px; }
   .microsite-hero { height: 95vh; min-height: 600px; }
-  .slide-content h1, .ms-hero-content h1 { font-size: 58px; }
+  .ms-hero-content { padding-bottom: 80px; }
+  .slide-content h1, .ms-hero-content h1 { font-size: 58px; margin-bottom: 12px; }
+  .slide-content p, .ms-hero-sub { font-size: 18px; margin-bottom: 24px; }
+  .ms-hero-dots { bottom: 30px; }
+  
+  .stat-pills { gap: 8px; margin-top: 20px; }
+  .stat-pill { padding: 10px 16px; }
+  .stat-pill b { font-size: 16px; }
+  .stat-pill span { font-size: 12px; }
+
   .hero-nav { display:flex; gap:10px; position:absolute; bottom:34px; right:32px; z-index:5; }
   .hero-nav button { width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.4); color:#fff; font-size:16px; cursor:pointer; }
   

@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Nav Dropdown Accordion
   const navDropdownBtns = document.querySelectorAll('.nav-dropdown-btn');
   navDropdownBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const drop = btn.parentElement.querySelector('.drop');
       const isOpen = drop.classList.contains('is-open');
       document.querySelectorAll('.drop').forEach(d => d.classList.remove('is-open'));
