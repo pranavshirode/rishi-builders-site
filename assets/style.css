@@ -19,13 +19,13 @@
    BASE (Mobile First)
    ========================================================================== */
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
-html { scroll-behavior:smooth; overflow-x: hidden; }
+html { scroll-behavior:smooth; overflow-x: clip; }
 body { 
   font-family:'Lato', sans-serif; 
   color:var(--ink); 
   background:var(--white); 
   line-height:1.65; 
-  overflow-x: hidden; 
+  overflow-x: clip; 
   position: relative;
   /* Safe area insets for mobile */
   padding-bottom: env(safe-area-inset-bottom);
@@ -564,7 +564,7 @@ footer::before { content:''; position:absolute; left:0; right:0; top:0; height:4
   }
   .mini-cta-bar.visible { transform: translateY(0); }
   .mini-cta-info { color: #fff; }
-  .mini-cta-info h4 { font-size: 18px; margin-bottom: 4px; }
+  .mini-cta-info h4 { font-size: 18px; margin-bottom: 4px; color: #ffffff; }
   .mini-cta-info p { font-size: 13px; color: #ccc; }
   .mini-cta-actions { display: flex; gap: 12px; }
 
