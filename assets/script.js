@@ -31,7 +31,16 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Close nav when clicking any anchor link inside it
     nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeNav);
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        // If it's a hash link, close immediately
+        if (href && href.startsWith('#')) {
+          closeNav();
+        } else {
+          // For actual page navigation, let the browser start navigating before closing the drawer
+          setTimeout(closeNav, 300);
+        }
+      });
     });
   }
 
