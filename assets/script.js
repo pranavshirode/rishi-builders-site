@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const navDropdownBtns = document.querySelectorAll('.nav-dropdown-btn');
   navDropdownBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const drop = btn.nextElementSibling;
+      const drop = btn.parentElement.querySelector('.drop');
       const isOpen = drop.classList.contains('is-open');
       document.querySelectorAll('.drop').forEach(d => d.classList.remove('is-open'));
       document.querySelectorAll('.nav-dropdown-btn').forEach(b => b.textContent = b.textContent.replace('▴', '▾'));
