@@ -168,6 +168,7 @@ body:has(.mobile-menu-toggle:checked) { overflow: hidden; }
 
 /* SECTION LAYOUTS */
 section, .ms-section { padding:60px 0; }
+#sec-related { padding-bottom: 120px; }
 .ms-section.alt { background:var(--cream); }
 .section-head { margin-bottom:32px; }
 .section-head h2 { font-size:28px; line-height:1.2; margin-bottom:12px; }
